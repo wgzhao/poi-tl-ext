@@ -102,7 +102,7 @@ public class NumberingContext {
         if (numberingParagraphs == null) {
             throw new IllegalStateException("Call startLevel method first");
         }
-        paragraph.setNumID(BigInteger.valueOf(nextNumberingLevel - 1));
+        paragraph.setNumILvl(BigInteger.valueOf(nextNumberingLevel - 1));
         numberingParagraphs.add(paragraph);
     }
 

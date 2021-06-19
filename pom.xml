@@ -4,7 +4,7 @@
     <groupId>com.wgzhao.poi</groupId>
     <artifactId>poi-tl-ext</artifactId>
     <name>poi-tl extension</name>
-    <version>1.8.0</version>
+    <version>1.9.0</version>
     <scm>
         <connection>scm:git:https://github.com/wgzhao/poi-tl-ext.git</connection>
         <developerConnection>scm:git:git@github.com:wgzhao/poi-tl-ext.git</developerConnection>
@@ -12,7 +12,7 @@
         <tag>HEAD</tag>
     </scm>
     <properties>
-        <poi-tl.version>1.8.0</poi-tl.version>
+        <poi-tl.version>1.9.0</poi-tl.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <commons-lang.version>3.10</commons-lang.version>
         <commons-io.version>2.6</commons-io.version>

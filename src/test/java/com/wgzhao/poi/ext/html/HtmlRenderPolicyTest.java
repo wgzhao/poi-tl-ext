@@ -31,7 +31,7 @@ class HtmlRenderPolicyTest {
     @Test
     void doRender() throws IOException {
         HtmlRenderPolicy htmlRenderPolicy = new HtmlRenderPolicy();
-        Configure configure = Configure.newBuilder()
+        Configure configure = Configure.builder()
                 .bind("teachContent", htmlRenderPolicy)
                 .bind("plainContent", htmlRenderPolicy)
                 .build();

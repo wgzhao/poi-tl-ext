@@ -14,7 +14,7 @@ class LaTeXRenderPolicyTest {
     @Test
     void doRender() throws IOException {
         LaTeXRenderPolicy laTeXRenderPolicy = new LaTeXRenderPolicy();
-        Configure configure = Configure.newBuilder()
+        Configure configure = Configure.builder()
                 .bind("math1", laTeXRenderPolicy)
                 .bind("math2", laTeXRenderPolicy)
                 .bind("math3", laTeXRenderPolicy)

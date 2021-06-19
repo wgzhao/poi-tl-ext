@@ -38,7 +38,7 @@ class MathMLRenderPolicyTest {
     @Test
     void doRender() throws IOException {
         MathMLRenderPolicy mathMLRenderPolicy = new MathMLRenderPolicy();
-        Configure configure = Configure.newBuilder()
+        Configure configure = Configure.builder()
                 .bind("math1", mathMLRenderPolicy)
                 .bind("math2", mathMLRenderPolicy)
                 .bind("math3", mathMLRenderPolicy)
