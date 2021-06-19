@@ -5,13 +5,14 @@
 
 ```xml
 <dependency>
-    <groupId>io.github.draco1023</groupId>
+    <groupId>com.wgzhao.poi</groupId>
     <artifactId>poi-tl-ext</artifactId>
-    <version>0.3.3</version>
+    <version>1.8.0</version>
 </dependency>
 ```
 
 # 扩展功能
+
 - 支持渲染`HTML`字符串，插件`HtmlRenderPolicy`的使用方法如下（也可参考[文档](http://deepoove.com/poi-tl/#_%E4%BD%BF%E7%94%A8%E6%8F%92%E4%BB%B6)）
 
   ```java
@@ -28,3 +29,10 @@
 
 - 支持渲染`MathML`字符串，插件类为`MathMLRenderPolicy`
 - 支持渲染`LaTeX`字符串，插件类为`LaTeXRenderPolicy`
+
+# 版本说明
+
+因为 [poi-tl](https://github.com/Sayi/poi-tl.git) 的发行版本之间并不完全兼容，所以这里的版本号就和 `poi-tl` 版本保持一致
+大致上前两位的版本相符合则兼容。
+
+比如 `1.8.x` 就和 `poi-tl` 的 `1.8.x` 兼容，如有特别情况，会临行说明

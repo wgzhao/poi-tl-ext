@@ -17,11 +17,6 @@
 package com.wgzhao.poi.ext.html.tag;
 
 import com.steadystate.css.dom.CSSStyleDeclarationImpl;
-import org.apache.commons.lang3.math.NumberUtils;
-import org.apache.poi.util.Units;
-import org.apache.poi.xwpf.usermodel.XWPFTable;
-import org.apache.poi.xwpf.usermodel.XWPFTableCell;
-import org.apache.poi.xwpf.usermodel.XWPFTableRow;
 import com.wgzhao.poi.ext.html.ElementRenderer;
 import com.wgzhao.poi.ext.html.HtmlConstants;
 import com.wgzhao.poi.ext.html.HtmlRenderContext;
@@ -30,6 +25,11 @@ import com.wgzhao.poi.ext.html.util.CSSLengthUnit;
 import com.wgzhao.poi.ext.html.util.JsoupUtils;
 import com.wgzhao.poi.ext.html.util.RenderUtils;
 import com.wgzhao.poi.ext.html.util.Span;
+import org.apache.commons.lang3.math.NumberUtils;
+import org.apache.poi.util.Units;
+import org.apache.poi.xwpf.usermodel.XWPFTable;
+import org.apache.poi.xwpf.usermodel.XWPFTableCell;
+import org.apache.poi.xwpf.usermodel.XWPFTableRow;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.openxmlformats.schemas.wordprocessingml.x2006.main.CTRow;

@@ -2,17 +2,15 @@ package com.wgzhao.poi.ext.latex;
 
 import com.deepoove.poi.policy.AbstractRenderPolicy;
 import com.deepoove.poi.render.RenderContext;
-import com.wgzhao.poi.ext.html.HtmlRenderPolicy;
+import com.wgzhao.poi.ext.math.MathMLUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.poi.xwpf.usermodel.XWPFParagraph;
-import com.wgzhao.poi.ext.math.MathMLUtils;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Text;
 import uk.ac.ed.ph.snuggletex.SnuggleEngine;
 import uk.ac.ed.ph.snuggletex.SnuggleInput;
 import uk.ac.ed.ph.snuggletex.SnuggleSession;
-import uk.ac.ed.ph.snuggletex.definitions.CorePackageDefinitions;
 import uk.ac.ed.ph.snuggletex.internal.util.XMLUtilities;
 import uk.ac.ed.ph.snuggletex.utilities.DefaultTransformerFactoryChooser;
 

@@ -60,10 +60,11 @@ import org.openxmlformats.schemas.wordprocessingml.x2006.main.CTUnderline;
 import org.openxmlformats.schemas.wordprocessingml.x2006.main.STBorder;
 import org.openxmlformats.schemas.wordprocessingml.x2006.main.STTblWidth;
 import org.openxmlformats.schemas.wordprocessingml.x2006.main.STUnderline;
-import org.w3c.dom.css.CSSValue;
 import org.w3c.css.sac.InputSource;
+import org.w3c.dom.css.CSSValue;
 
 import javax.xml.namespace.QName;
+
 import java.io.IOException;
 import java.io.StringReader;
 import java.math.BigInteger;

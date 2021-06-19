@@ -23,16 +23,14 @@ import net.sf.saxon.s9api.Xslt30Transformer;
 import net.sf.saxon.s9api.XsltCompiler;
 import net.sf.saxon.s9api.XsltExecutable;
 import org.apache.poi.xwpf.usermodel.XWPFParagraph;
-import org.apache.xmlbeans.XmlCursor;
 import org.apache.xmlbeans.XmlException;
 import org.openxmlformats.schemas.officeDocument.x2006.math.CTOMath;
-import org.openxmlformats.schemas.officeDocument.x2006.math.CTR;
-import org.openxmlformats.schemas.wordprocessingml.x2006.main.CTFonts;
 import org.openxmlformats.schemas.wordprocessingml.x2006.main.CTP;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.xml.transform.stream.StreamSource;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringReader;

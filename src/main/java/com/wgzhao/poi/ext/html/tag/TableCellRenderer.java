@@ -17,13 +17,13 @@
 package com.wgzhao.poi.ext.html.tag;
 
 import com.steadystate.css.dom.CSSStyleDeclarationImpl;
-import org.apache.commons.lang3.math.NumberUtils;
-import org.apache.poi.xwpf.usermodel.XWPFTable;
-import org.apache.poi.xwpf.usermodel.XWPFTableCell;
 import com.wgzhao.poi.ext.html.ElementRenderer;
 import com.wgzhao.poi.ext.html.HtmlConstants;
 import com.wgzhao.poi.ext.html.HtmlRenderContext;
 import com.wgzhao.poi.ext.html.util.RenderUtils;
+import org.apache.commons.lang3.math.NumberUtils;
+import org.apache.poi.xwpf.usermodel.XWPFTable;
+import org.apache.poi.xwpf.usermodel.XWPFTableCell;
 import org.jsoup.nodes.Element;
 
 /**
