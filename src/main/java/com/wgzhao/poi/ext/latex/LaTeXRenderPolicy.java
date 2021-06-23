@@ -1,10 +1,12 @@
 package com.wgzhao.poi.ext.latex;
 
 import com.deepoove.poi.policy.AbstractRenderPolicy;
+import com.deepoove.poi.policy.TextRenderPolicy;
 import com.deepoove.poi.render.RenderContext;
 import com.wgzhao.poi.ext.math.MathMLUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.poi.xwpf.usermodel.XWPFParagraph;
+import org.apache.poi.xwpf.usermodel.XWPFRun;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Text;
@@ -24,6 +26,7 @@ import java.io.IOException;
  */
 public class LaTeXRenderPolicy extends AbstractRenderPolicy<String> {
     private SnuggleSession session;
+    public static final String REGEX_LINE_CHARACTOR = "\\n";
 
     @Override
     protected boolean validate(String data) {
@@ -45,20 +48,33 @@ public class LaTeXRenderPolicy extends AbstractRenderPolicy<String> {
 
     @Override
     public void doRender(RenderContext<String> context) throws Exception {
+        XWPFRun run = context.getRun();
         XWPFParagraph paragraph = (XWPFParagraph) context.getRun().getParent();
 
         NodeList nodeList = session.buildDOMSubtree();
         int length = nodeList.getLength();
         for (int i = 0; i < length; i++) {
             Node node = nodeList.item(i);
-            if (node instanceof Text) {
-                paragraph.getCTP().addNewR().addNewT().setStringValue(node.getTextContent());
-            } else if ("math".equals(node.getLocalName())) {
+            if ("math".equals(node.getLocalName())) {
                 String math = XMLUtilities.serializeNode(node,
                         Initializer.SNUGGLE_ENGINE.getDefaultXMLStringOutputOptions());
 
                 MathMLUtils.renderTo(paragraph, math);
+            } else {
+                renderText(paragraph, node.getTextContent());
             }
+        }
+    }
+
+    private void renderText(XWPFParagraph paragraph, String textContent)
+    {
+        String[] split = textContent.split(REGEX_LINE_CHARACTOR);
+        if (split.length > 0) {
+            paragraph.getCTP().addNewR().addNewT().setStringValue(split[0]);
+        }
+        for (int i =1; i< split.length; i++) {
+            paragraph.getCTP().addNewR().addNewCr();
+            paragraph.getCTP().addNewR().addNewT().setStringValue(split[i]);
         }
     }
 
